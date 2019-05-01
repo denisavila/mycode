@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+######## Scan for words ##########
+## 
+datafile = open("sol.txt", "r")
+
+## display file to the screen - .read()
+print(datafile.read())
+
+## close file
+datafile.close()
+
+######## EXPLORE READLINES ##########
+## re-create file object to explore new method
+datafile = open("sol.txt", "r")
+
+## make a list of file lines - .readlines()
+datafile = configfile.readlines()
+print(datafile)
+
+## Iterate thrhough datafile
+for x in datafile:
+    print(x)
+
+## Always close your file
+datafile.close()
