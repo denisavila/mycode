@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-x = int(input("Enter a number:"))
-f=1
-for i in range(1,x+1):
-  print( i)
-  f = f * i
-print(x, '! = ' , f)
+"""
+Code for Factorials
+"""
+X = int(input("Enter a number:"))
+F = 1
+for i in range(1, X+1):
+    print(i)
+    F = F * i
+print(X, '! = ', F)
