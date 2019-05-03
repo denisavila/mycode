@@ -23,7 +23,7 @@ def find(pattern, path):
             if fnmatch.fnmatch(name, pattern):
                 #result.append(os.path.join(root, name))
                 files_result.append(name)
-                mydict=({"Name": files_result,"Location": os.path.join(root, name)})
+                mydict=({"Name": name,"Location": os.path.join(root, name)})
                 result.append(mydict)
     return result
 
@@ -48,7 +48,7 @@ def main():
     """runtime code"""
     lookfor = "*.py" #input("What pattern am I looking for (Example: *.txt or *.cfg) ")
     lookwhere = "/home/" #input("What is the path in which I should search? ")
-    lookwhere = "/home/student/mycode/Excel_Files" 
+    #lookwhere = "/home/student/mycode/Excel_Files" 
 
     #print("Results: ", [find(lookfor, lookwhere)]) # call function
     mylistdict = find(lookfor, lookwhere)
@@ -60,18 +60,5 @@ def main():
 main()
 
 
-#print("Hello! This program will make you a *.xls file")
-
-#while(True):
-#    mylistdict.append(get_ip_data()) # add an item to the list returned by get_ip_data() #{"IP": value, "driver": value}
-#    keep_going = input("\nWould you like to add another value? Enter to continue, or enter 'q' to quit: ")
-#    if (keep_going.lower() == 'q'):
-#        break
-
-#filename = "All_The_pys.xls" # input("\nWhat is the name of the *.xls file? ")
-
-#pyexcel.save_as(records=mylistdict, dest_file_name=filename + ".xls")
-
-#print("The file " + filename + ".xls should be in your local directory")
 
 
